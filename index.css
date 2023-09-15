@@ -1,7 +1,35 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('fonts/Poppins-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
-    font-family: Poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
     height: 100vh;  /* 100% of the viewport height */
     display: flex;  /* Set body to be a flex container */
     justify-content: center;  /* Center its children horizontally */
@@ -37,7 +65,6 @@ a:hover {
 .profile-container {
     display: flex;
     align-items: center;
-    /* margin-top: 50px;  <-- Remove this line */
     margin-left: 40px;
     margin-bottom: 40px;
 }
@@ -91,7 +118,6 @@ a:hover {
 .intro-container {
     margin-left: 40px;  
     margin-right: 40px;  
-    /* margin-top: 50px; <-- Adjust this if needed, but it can be removed for equal top and bottom spacing */
 }
 
 .intro-container p {
@@ -99,10 +125,6 @@ a:hover {
     line-height: 1.4x;  /* For better readability */
     margin-bottom: 20px;  /* Space between paragraphs */
 }
-
-/* ...Your existing styles... */
-
-/* ...Your existing styles... */
 
 /* Small devices and below (like landscape phones and smaller) */
 @media only screen and (max-width: 576px) {

@@ -131,7 +131,7 @@ a:hover {
 @media only screen and (max-width: 576px) {
 
     body {
-        padding-top: env(safe-area-inset-top, 30px);
+        padding-top: 30px;
     }
     
     .profile-container {

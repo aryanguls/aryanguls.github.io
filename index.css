@@ -23,6 +23,7 @@ a:hover {
 }
 
 .outer-container {
+    padding-top: 10px;
     max-width: 650px;  /* Use max-width instead of width */
     width: 90%;    /* This ensures it takes up to 100% of the screen width */
     border: 5px solid black; 

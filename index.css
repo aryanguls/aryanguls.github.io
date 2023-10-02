@@ -1,12 +1,16 @@
+html {
+    height: 100%; /* Set height of html to 100% */
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: Poppins, sans-serif;
-    height: 100vh;  /* 100% of the viewport height */
-    display: flex;  /* Set body to be a flex container */
-    justify-content: center;  /* Center its children horizontally */
-    align-items: center;  /* Center its children vertically */
-    background-color: #b1b1b1; /* Optional: set a different background color to make the black box stand out */
+    height: 100%; /* Change from 100vh to 100% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b1b1b1;
 }
 
 a {
@@ -65,17 +69,17 @@ a:hover {
 
 .profile-name {
     margin-bottom: 5px;  /* Adjust as per your preference */
-    font-size: 31px;
+    font-size: 32px;
     font-weight: 500;
 }
 
 .logos {
     display: flex;  /* Horizontally layout the logos */
-    gap: 10px;  /* Provides space between logos */
+    gap: 6px;  /* Provides space between logos */
 }
 
 .logo {
-    width: 30px;  /* Adjust based on your logo size preference */
+    width: 28px;  /* Adjust based on your logo size preference */
     height: auto;
 }
 
@@ -94,8 +98,32 @@ a:hover {
 
 .intro-container p {
     font-size: 15px;  /* Adjust as per your preference */
-    line-height: 1.4x;  /* For better readability */
-    margin-bottom: 20px;  /* Space between paragraphs */
+    line-height: 1.4;  /* For better readability */
+    margin-bottom: 10px;  /* Space between paragraphs */
+}
+
+.side-container {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 20px; /* Adjust the top margin as per your liking */
+}
+
+.side-container h2 {
+    font-weight: 600; /* Making it bold */
+    font-size: 20px; /* You can adjust the size as per your liking */
+    margin-bottom: 0;
+}
+
+.side-container ul {
+    margin-top: 8px;
+    list-style-type: disc; /* Using disc as the bullet point, you can change this */
+    padding-left: 25px; /* Adding some padding to the left of the list */
+}
+
+.side-container li {
+    font-size: 15px;  /* Adjust as per your preference */
+    line-height: 1.2;  /* For better readability */
+    margin-bottom: 10px;  /* Space between list items */
 }
 
 /* Small devices and below (like landscape phones and smaller) */
@@ -133,6 +161,21 @@ a:hover {
 
     .intro-container p {
         font-size: 13px;
+    }
+
+    .side-container {
+        margin-left: 5px; /* Adjusted the margin for smaller screens */
+        margin-right: 5px; /* Adjusted the margin for smaller screens */
+        margin-top: 20px; /* Kept the margin-top the same, but you can adjust as needed */
+    }
+
+    .side-container h2 {
+        font-size: 16px; /* Reduced the font size for smaller screens */
+    }
+
+    .side-container li {
+        font-size: 13px;  /* Reduced the font size for smaller screens */
+        line-height: 1.2;  /* Adjusted line height for readability on small screens */
     }
 }
 

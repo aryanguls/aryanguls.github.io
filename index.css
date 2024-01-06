@@ -1,18 +1,19 @@
 html {
-    height: 100%; /* Set height of html to 100% */
+    height: 100%; 
 }
 
 body {
-    padding-top: env(safe-area-inset-top, 30px);
+    padding-top: 1vh; /* Minimum top padding */
     margin: 0;
-    padding: 0;
     font-family: Poppins, sans-serif;
-    height: 100vh; /* Change from 100vh to 100% */
+    min-height: 100vh; /* Ensuring the body takes at least the viewport height */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
     background-color: #b1b1b1;
 }
+
 
 a {
     color: black; /* This sets the color of the text for the hyperlink */
@@ -24,20 +25,15 @@ a:hover {
 }
 
 .outer-container {
-    max-width: 650px;  /* Use max-width instead of width */
-    width: 90%;    /* This ensures it takes up to 100% of the screen width */
-    border: 5px solid black; 
+    max-width: 600px;
+    width: 90%;
+    border: 5px solid black;
     border-radius: 2px;
     background-color: #ffffff;
-    padding: 40px 5px; 
+    padding: 30px 1px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    margin-top: 1vh; /* Minimum top margin to keep the container from touching the very top */
 }
-
-
-/* .outer-container:hover {
-    border: 5px solid gold;
-    transition: all 0.3s ease-in-out;
-} */
 
 .profile-container {
     display: flex;
@@ -86,7 +82,7 @@ a:hover {
 
 .description {
     margin-top: 15px;  /* Adds a little space between the logos and your description */
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     text-justify: auto;
     font-style: italic;
@@ -98,7 +94,7 @@ a:hover {
 }
 
 .intro-container p {
-    font-size: 15px;  /* Adjust as per your preference */
+    font-size: 14px;  /* Adjust as per your preference */
     line-height: 1.4;  /* For better readability */
     margin-bottom: 10px;  /* Space between paragraphs */
 }
@@ -111,7 +107,7 @@ a:hover {
 
 .side-container h2 {
     font-weight: 600; /* Making it bold */
-    font-size: 20px; /* You can adjust the size as per your liking */
+    font-size: 19px; /* You can adjust the size as per your liking */
     margin-bottom: 0;
 }
 
@@ -122,22 +118,39 @@ a:hover {
 }
 
 .side-container li {
-    font-size: 15px;  /* Adjust as per your preference */
-    line-height: 1.2;  /* For better readability */
+    font-size: 14px;  /* Adjust as per your preference */
+    line-height: 0.8;  /* For better readability */
     margin-bottom: 10px;  /* Space between list items */
 }
 
 /* Small devices and below (like landscape phones and smaller) */
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 650px) {
+    .description {
+        font-size: 15px;
+        margin-top: 10px; /* Adjusted top margin */
+        margin-bottom: 10px; /* Adjusted bottom margin */
+    }
+}
 
+@media only screen and (max-width: 576px) {
     body {
-        padding-top: 30px;
+        padding-top: 20px; /* Increased top padding for smaller screens */
     }
     
+    .outer-container {
+        padding: 20px 5px; /* Reduced padding inside the outer container */
+        width: 85%;
+    }
+
     .profile-container {
         flex-direction: column; /* Stack profile picture and info vertically */
-        align-items: center; /* Center items horizontally now */
-        margin-left: 0; /* Reset left margin */
+        align-items: center; /* Center items horizontally */
+        margin-bottom: 10px;
+    }
+
+    .profile-container, .intro-container, .side-container {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .info-container {
@@ -146,41 +159,57 @@ a:hover {
         text-align: center; /* Center text */
     }
 
-    .intro-container {
-        margin-left: 5px;
-        margin-right: 5px;
+    .intro-container, .side-container {
+        margin-left: 10px;
+        margin-right: 10px;
     }
-    
+
     .profile-picture {
-        width: 120px;  
-        height: 120px;
+        width: 100px;  /* Reduced size of profile picture */
+        height: 100px;
     }
 
     .profile-name {
-        font-size: 26px;
+        font-size: 24px; /* Adjusted font size of name */
+    }
+
+    .logos .logo {
+        width: 24px; /* Adjusted logo sizes */
     }
 
     .description {
         font-size: 14px;
     }
 
-    .intro-container p {
-        font-size: 13px;
-    }
-
-    .side-container {
-        margin-left: 5px; /* Adjusted the margin for smaller screens */
-        margin-right: 5px; /* Adjusted the margin for smaller screens */
-        margin-top: 20px; /* Kept the margin-top the same, but you can adjust as needed */
+    .intro-container p, .side-container li {
+        font-size: 12px; /* Adjusted font size for better readability */
     }
 
     .side-container h2 {
-        font-size: 16px; /* Reduced the font size for smaller screens */
+        font-size: 16px; /* Adjusted heading size for smaller screens */
+        line-height: 1; /* Adjusted line height */
+    }
+
+    .side-container {
+        margin-bottom: 10px; /* Reduced bottom margin of the side container */
     }
 
     .side-container li {
-        font-size: 13px;  /* Reduced the font size for smaller screens */
-        line-height: 1.2;  /* Adjusted line height for readability on small screens */
+        line-height: 1.2; /* Adjusted line height */
     }
 }
 
+@media only screen and (max-width: 300px) {
+    .description {
+        font-size: 14px;
+    }
+
+    .logos .logo {
+        width: 22px; /* Adjusted logo sizes */
+    }
+
+    .side-container h2 {
+        font-size: 15px; /* Adjusted heading size for smaller screens */
+        line-height: 1; /* Adjusted line height */
+    }
+}
